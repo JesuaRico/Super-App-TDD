@@ -1,0 +1,9 @@
+analyzer:
+  exclude:
+    - build/**
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # El manual usa estilo didáctico; estas reglas solo generan avisos, no errores.
+    avoid_print: false
