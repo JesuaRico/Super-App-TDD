@@ -83,7 +83,7 @@ class Monedero {
   }
 
   void _validarSalida(String cuenta, int monto) {
-    if (saldo(cuenta) < monto) throw const SaldoInsuficienteException();
+    if (saldo(cuenta) < 0) throw const SaldoInsuficienteException();
     if (!_sinLimites.contains(cuenta) &&
         salidasDeHoy(cuenta) + monto > maxSalidasDiarias) {
       throw LimiteExcedidoException(
